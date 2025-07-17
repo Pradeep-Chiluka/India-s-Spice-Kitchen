@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice of India Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Spice of India Restaurant</h1>
+    </header>
+    <div class="container">
+        <div class="filter-section">
+            <label for="categoryFilter">Filter by Category: </label>
+            <select id="categoryFilter" onchange="filterMenu()">
+                <option value="all">All</option>
+                <option value="appetizers">Appetizers</option>
+                <option value="main-courses">Main Courses</option>
+                <option value="curries">Curries</option>
+                <option value="breads">Breads</option>
+                <option value="rice">Rice</option>
+                <option value="desserts">Desserts</option>
+                <option value="water-bottles">Water Bottles</option>
+                <option value="mocktails">Mocktails</option>
+                <option value="cocktails">Cocktails</option>
+                <option value="additional">Additional</option>
+            </select>
+        </div>
+        <div class="menu-section" data-category="appetizers">
+            <h2>Appetizers (Veg)</h2>
+            <div class="menu-item"><img src="images/samosa.jpg" alt="Samosa"><div class="menu-details"><span>Samosa</span><span>₹80</span></div><button class="add-to-cart" onclick="addToCart('Samosa', 80)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/pakora.jpg" alt="Pakora"><div class="menu-details"><span>Pakora</span><span>₹90</span></div><button class="add-to-cart" onclick="addToCart('Pakora', 90)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/paneer-tikka.jpg" alt="Paneer Tikka"><div class="menu-details"><span>Paneer Tikka</span><span>₹120</span></div><button class="add-to-cart" onclick="addToCart('Paneer Tikka', 120)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/vada.jpg" alt="Vada"><div class="menu-details"><span>Vada</span><span>₹70</span></div><button class="add-to-cart" onclick="addToCart('Vada', 70)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/dahi-vada.jpg" alt="Dahi Vada"><div class="menu-details"><span>Dahi Vada</span><span>₹100</span></div><button class="add-to-cart" onclick="addToCart('Dahi Vada', 100)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/aloo-tikki.jpg" alt="Aloo Tikka"><div class="menu-details"><span>Aloo Tikka</span><span>₹80</span></div><button class="add-to-cart" onclick="addToCart('Aloo Tikka', 80)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chaat.jpg" alt="Chaat"><div class="menu-details"><span>Chaat</span><span>₹90</span></div><button class="add-to-cart" onclick="addToCart('Chaat', 90)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/papdi-chaat.jpg" alt="Papdi Chaat"><div class="menu-details"><span>Papdi Chaat</span><span>₹110</span></div><button class="add-to-cart" onclick="addToCart('Papdi Chaat', 110)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/dhokla.jpg" alt="Dhokla"><div class="menu-details"><span>Dhokla</span><span>₹70</span></div><button class="add-to-cart" onclick="addToCart('Dhokla', 70)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/khandvi.jpg" alt="Khandvi"><div class="menu-details"><span>Khandvi</span><span>₹90</span></div><button class="add-to-cart" onclick="addToCart('Khandvi', 90)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/idli.jpg" alt="Idli"><div class="menu-details"><span>Idli</span><span>₹60</span></div><button class="add-to-cart" onclick="addToCart('Idli', 60)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/uttapam.jpg" alt="Uttapam"><div class="menu-details"><span>Uttapam</span><span>₹100</span></div><button class="add-to-cart" onclick="addToCart('Uttapam', 100)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/dosa.jpg" alt="Dosa"><div class="menu-details"><span>Dosa</span><span>₹120</span></div><button class="add-to-cart" onclick="addToCart('Dosa', 120)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/medu-vada.jpg" alt="Medu Vada"><div class="menu-details"><span>Medu Vada</span><span>₹80</span></div><button class="add-to-cart" onclick="addToCart('Medu Vada', 80)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/pani-puri.jpg" alt="Pani Puri"><div class="menu-details"><span>Pani Puri</span><span>₹90</span></div><button class="add-to-cart" onclick="addToCart('Pani Puri', 90)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="appetizers">
+            <h2>Appetizers (Non-Veg)</h2>
+            <div class="menu-item"><img src="images/chicken-tikka.jpg" alt="Chicken Tikka"><div class="menu-details"><span>Chicken Tikka</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Chicken Tikka', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-fry.jpg" alt="Fish Fry"><div class="menu-details"><span>Fish Fry</span><span>₹180</span></div><button class="add-to-cart" onclick="addToCart('Fish Fry', 180)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/keema-samosa.jpg" alt="Keema Samosa"><div class="menu-details"><span>Keema Samosa</span><span>₹120</span></div><button class="add-to-cart" onclick="addToCart('Keema Samosa', 120)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-pakora.jpg" alt="Chicken Pakora"><div class="menu-details"><span>Chicken Pakora</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Chicken Pakora', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/seekh-kebab.jpg" alt="Seekh Kebab"><div class="menu-details"><span>Seekh Kebab</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Seekh Kebab', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-wings.jpg" alt="Chicken Wings"><div class="menu-details"><span>Chicken Wings</span><span>₹170</span></div><button class="add-to-cart" onclick="addToCart('Chicken Wings', 170)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-pakora.jpg" alt="Fish Pakora"><div class="menu-details"><span>Fish Pakora</span><span>₹190</span></div><button class="add-to-cart" onclick="addToCart('Fish Pakora', 190)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/prawn-fry.jpg" alt="Prawn Fry"><div class="menu-details"><span>Prawn Fry</span><span>₹200</span></div><button class="add-to-cart" onclick="addToCart('Prawn Fry', 200)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-lollipop.jpg" alt="Chicken Lollipop"><div class="menu-details"><span>Chicken Lollipop</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Chicken Lollipop', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-keema.jpg" alt="Mutton Keema"><div class="menu-details"><span>Mutton Keema</span><span>₹180</span></div><button class="add-to-cart" onclick="addToCart('Mutton Keema', 180)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-fingers.jpg" alt="Fish Fingers"><div class="menu-details"><span>Fish Fingers</span><span>₹170</span></div><button class="add-to-cart" onclick="addToCart('Fish Fingers', 170)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-65.jpg" alt="Chicken 65"><div class="menu-details"><span>Chicken 65</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Chicken 65', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/prawn-pakora.jpg" alt="Prawn Pakora"><div class="menu-details"><span>Prawn Pakora</span><span>₹200</span></div><button class="add-to-cart" onclick="addToCart('Prawn Pakora', 200)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-chops.jpg" alt="Mutton Chops"><div class="menu-details"><span>Mutton Chops</span><span>₹190</span></div><button class="add-to-cart" onclick="addToCart('Mutton Chops', 190)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-koliwada.jpg" alt="Fish Koliwada"><div class="menu-details"><span>Fish Koliwada</span><span>₹180</span></div><button class="add-to-cart" onclick="addToCart('Fish Koliwada', 180)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="main-courses">
+            <h2>Main Courses (Veg)</h2>
+            <div class="menu-item"><img src="images/paneer-butter-masala.jpg" alt="Paneer Butter Masala"><div class="menu-details"><span>Paneer Butter Masala</span><span>₹220</span></div><button class="add-to-cart" onclick="addToCart('Paneer Butter Masala', 220)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/dal-makhani.jpg" alt="Dal Makhani"><div class="menu-details"><span>Dal Makhani</span><span>₹180</span></div><button class="add-to-cart" onclick="addToCart('Dal Makhani', 180)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chana-masala.jpg" alt="Chana Masala"><div class="menu-details"><span>Chana Masala</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Chana Masala', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/baingan-bharta.jpg" alt="Baingan Bharta"><div class="menu-details"><span>Baingan Bharta</span><span>₹170</span></div><button class="add-to-cart" onclick="addToCart('Baingan Bharta', 170)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/aloo-gobi.jpg" alt="Aloo Gobi"><div class="menu-details"><span>Aloo Gobi</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Aloo Gobi', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/matar-paneer.jpg" alt="Matar Paneer"><div class="menu-details"><span>Matar Paneer</span><span>₹200</span></div><button class="add-to-cart" onclick="addToCart('Matar Paneer', 200)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/bhindi-masala.jpg" alt="Bhindi Masala"><div class="menu-details"><span>Bhindi Masala</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Bhindi Masala', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/jeera-aloo.jpg" alt="Jeera Aloo"><div class="menu-details"><span>Jeera Aloo</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Jeera Aloo', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/kadhi-pakora.jpg" alt="Kadhi Pakora"><div class="menu-details"><span>Kadhi Pakora</span><span>₹180</span></div><button class="add-to-cart" onclick="addToCart('Kadhi Pakora', 180)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/rajma-masala.jpg" alt="Rajma Masala"><div class="menu-details"><span>Rajma Masala</span><span>₹170</span></div><button class="add-to-cart" onclick="addToCart('Rajma Masala', 170)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/vegetable-korma.jpg" alt="Vegetable Korma"><div class="menu-details"><span>Vegetable Korma</span><span>₹200</span></div><button class="add-to-cart" onclick="addToCart('Vegetable Korma', 200)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/malai-kofta.jpg" alt="Malai Kofta"><div class="menu-details"><span>Malai Kofta</span><span>₹220</span></div><button class="add-to-cart" onclick="addToCart('Malai Kofta', 220)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/shahi-paneer.jpg" alt="Shahi Paneer"><div class="menu-details"><span>Shahi Paneer</span><span>₹230</span></div><button class="add-to-cart" onclick="addToCart('Shahi Paneer', 230)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/navratan-korma.jpg" alt="Navratan Korma"><div class="menu-details"><span>Navratan Korma</span><span>₹210</span></div><button class="add-to-cart" onclick="addToCart('Navratan Korma', 210)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/palak-aloo.jpg" alt="Palak Aloo"><div class="menu-details"><span>Palak Aloo</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Palak Aloo', 160)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="main-courses">
+            <h2>Main Courses (Non-Veg)</h2>
+            <div class="menu-item"><img src="images/chicken-curry.jpg" alt="Chicken Curry"><div class="menu-details"><span>Chicken Curry</span><span>₹250</span></div><button class="add-to-cart" onclick="addToCart('Chicken Curry', 250)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-curry.jpg" alt="Mutton Curry"><div class="menu-details"><span>Mutton Curry</span><span>₹300</span></div><button class="add-to-cart" onclick="addToCart('Mutton Curry', 300)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-curry.jpg" alt="Fish Curry"><div class="menu-details"><span>Fish Curry</span><span>₹280</span></div><button class="add-to-cart" onclick="addToCart('Fish Curry', 280)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/prawn-curry.jpg" alt="Prawn Curry"><div class="menu-details"><span>Prawn Curry</span><span>₹320</span></div><button class="add-to-cart" onclick="addToCart('Prawn Curry', 320)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-korma.jpg" alt="Chicken Korma"><div class="menu-details"><span>Chicken Korma</span><span>₹270</span></div><button class="add-to-cart" onclick="addToCart('Chicken Korma', 270)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-rogan-josh.jpg" alt="Mutton Rogan Josh"><div class="menu-details"><span>Mutton Rogan Josh</span><span>₹310</span></div><button class="add-to-cart" onclick="addToCart('Mutton Rogan Josh', 310)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-masala.jpg" alt="Fish Masala"><div class="menu-details"><span>Fish Masala</span><span>₹290</span></div><button class="add-to-cart" onclick="addToCart('Fish Masala', 290)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/prawn-masala.jpg" alt="Prawn Masala"><div class="menu-details"><span>Prawn Masala</span><span>₹330</span></div><button class="add-to-cart" onclick="addToCart('Prawn Masala', 330)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-tikka-masala.jpg" alt="Chicken Tikka Masala"><div class="menu-details"><span>Chicken Tikka Masala</span><span>₹260</span></div><button class="add-to-cart" onclick="addToCart('Chicken Tikka Masala', 260)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-korma.jpg" alt="Mutton Korma"><div class="menu-details"><span>Mutton Korma</span><span>₹300</span></div><button class="add-to-cart" onclick="addToCart('Mutton Korma', 300)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-biryani.jpg" alt="Chicken Biryani"><div class="menu-details"><span>Chicken Biryani</span><span>₹280</span></div><button class="add-to-cart" onclick="addToCart('Chicken Biryani', 280)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-biryani.jpg" alt="Mutton Biryani"><div class="menu-details"><span>Mutton Biryani</span><span>₹320</span></div><button class="add-to-cart" onclick="addToCart('Mutton Biryani', 320)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-biryani.jpg" alt="Fish Biryani"><div class="menu-details"><span>Fish Biryani</span><span>₹290</span></div><button class="add-to-cart" onclick="addToCart('Fish Biryani', 290)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/prawn-biryani.jpg" alt="Prawn Biryani"><div class="menu-details"><span>Prawn Biryani</span><span>₹340</span></div><button class="add-to-cart" onclick="addToCart('Prawn Biryani', 340)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/egg-curry.jpg" alt="Egg Curry"><div class="menu-details"><span>Egg Curry</span><span>₹180</span></div><button class="add-to-cart" onclick="addToCart('Egg Curry', 180)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="curries">
+            <h2>Curries (Veg)</h2>
+            <div class="menu-item"><img src="images/paneer-curry.jpg" alt="Paneer Curry"><div class="menu-details"><span>Paneer Curry</span><span>₹200</span></div><button class="add-to-cart" onclick="addToCart('Paneer Curry', 200)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/dal-fry.jpg" alt="Dal Fry"><div class="menu-details"><span>Dal Fry</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Dal Fry', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/vegetable-curry.jpg" alt="Vegetable Curry"><div class="menu-details"><span>Vegetable Curry</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Vegetable Curry', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/spinach-curry.jpg" alt="Spinach Curry"><div class="menu-details"><span>Spinach Curry</span><span>₹170</span></div><button class="add-to-cart" onclick="addToCart('Spinach Curry', 170)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/potato-curry.jpg" alt="Potato Curry"><div class="menu-details"><span>Potato Curry</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Potato Curry', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mixed-vegetable.jpg" alt="Mixed Vegetable"><div class="menu-details"><span>Mixed Vegetable</span><span>₹180</span></div><button class="add-to-cart" onclick="addToCart('Mixed Vegetable', 180)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/cauliflower-curry.jpg" alt="Cauliflower Curry"><div class="menu-details"><span>Cauliflower Curry</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Cauliflower Curry', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/green-bean-curry.jpg" alt="Green Bean Curry"><div class="menu-details"><span>Green Bean Curry</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Green Bean Curry', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/lentil-curry.jpg" alt="Lentil Curry"><div class="menu-details"><span>Lentil Curry</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Lentil Curry', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/cabbage-curry.jpg" alt="Cabbage Curry"><div class="menu-details"><span>Cabbage Curry</span><span>₹130</span></div><button class="add-to-cart" onclick="addToCart('Cabbage Curry', 130)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/carrot-curry.jpg" alt="Carrot Curry"><div class="menu-details"><span>Carrot Curry</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Carrot Curry', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/peas-curry.jpg" alt="Peas Curry"><div class="menu-details"><span>Peas Curry</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Peas Curry', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/okra-curry.jpg" alt="Okra Curry"><div class="menu-details"><span>Okra Curry</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Okra Curry', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/tomato-curry.jpg" alt="Tomato Curry"><div class="menu-details"><span>Tomato Curry</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Tomato Curry', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/cucumber-curry.jpg" alt="Cucumber Curry"><div class="menu-details"><span>Cucumber Curry</span><span>₹130</span></div><button class="add-to-cart" onclick="addToCart('Cucumber Curry', 130)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="curries">
+            <h2>Curries (Non-Veg)</h2>
+            <div class="menu-item"><img src="images/chicken-gravy.jpg" alt="Chicken Gravy"><div class="menu-details"><span>Chicken Gravy</span><span>₹260</span></div><button class="add-to-cart" onclick="addToCart('Chicken Gravy', 260)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-gravy.jpg" alt="Mutton Gravy"><div class="menu-details"><span>Mutton Gravy</span><span>₹310</span></div><button class="add-to-cart" onclick="addToCart('Mutton Gravy', 310)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-gravy.jpg" alt="Fish Gravy"><div class="menu-details"><span>Fish Gravy</span><span>₹290</span></div><button class="add-to-cart" onclick="addToCart('Fish Gravy', 290)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/prawn-gravy.jpg" alt="Prawn Gravy"><div class="menu-details"><span>Prawn Gravy</span><span>₹330</span></div><button class="add-to-cart" onclick="addToCart('Prawn Gravy', 330)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-saag.jpg" alt="Chicken Saag"><div class="menu-details"><span>Chicken Saag</span><span>₹270</span></div><button class="add-to-cart" onclick="addToCart('Chicken Saag', 270)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-saag.jpg" alt="Mutton Saag"><div class="menu-details"><span>Mutton Saag</span><span>₹320</span></div><button class="add-to-cart" onclick="addToCart('Mutton Saag', 320)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-saag.jpg" alt="Fish Saag"><div class="menu-details"><span>Fish Saag</span><span>₹300</span></div><button class="add-to-cart" onclick="addToCart('Fish Saag', 300)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/prawn-saag.jpg" alt="Prawn Saag"><div class="menu-details"><span>Prawn Saag</span><span>₹340</span></div><button class="add-to-cart" onclick="addToCart('Prawn Saag', 340)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-vindaloo.jpg" alt="Chicken Vindaloo"><div class="menu-details"><span>Chicken Vindaloo</span><span>₹280</span></div><button class="add-to-cart" onclick="addToCart('Chicken Vindaloo', 280)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-vindaloo.jpg" alt="Mutton Vindaloo"><div class="menu-details"><span>Mutton Vindaloo</span><span>₹330</span></div><button class="add-to-cart" onclick="addToCart('Mutton Vindaloo', 330)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-vindaloo.jpg" alt="Fish Vindaloo"><div class="menu-details"><span>Fish Vindaloo</span><span>₹300</span></div><button class="add-to-cart" onclick="addToCart('Fish Vindaloo', 300)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/prawn-vindaloo.jpg" alt="Prawn Vindaloo"><div class="menu-details"><span>Prawn Vindaloo</span><span>₹350</span></div><button class="add-to-cart" onclick="addToCart('Prawn Vindaloo', 350)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/chicken-do-pyaza.jpg" alt="Chicken Do Pyaza"><div class="menu-details"><span>Chicken Do Pyaza</span><span>₹270</span></div><button class="add-to-cart" onclick="addToCart('Chicken Do Pyaza', 270)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mutton-do-pyaza.jpg" alt="Mutton Do Pyaza"><div class="menu-details"><span>Mutton Do Pyaza</span><span>₹320</span></div><button class="add-to-cart" onclick="addToCart('Mutton Do Pyaza', 320)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fish-do-pyaza.jpg" alt="Fish Do Pyaza"><div class="menu-details"><span>Fish Do Pyaza</span><span>₹290</span></div><button class="add-to-cart" onclick="addToCart('Fish Do Pyaza', 290)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="breads">
+            <h2>Breads (Veg)</h2>
+            <div class="menu-item"><img src="images/naan.jpg" alt="Naan"><div class="menu-details"><span>Naan</span><span>₹40</span></div><button class="add-to-cart" onclick="addToCart('Naan', 40)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/roti.jpg" alt="Roti"><div class="menu-details"><span>Roti</span><span>₹30</span></div><button class="add-to-cart" onclick="addToCart('Roti', 30)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/paratha.jpg" alt="Paratha"><div class="menu-details"><span>Paratha</span><span>₹60</span></div><button class="add-to-cart" onclick="addToCart('Paratha', 60)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/puri.jpg" alt="Puri"><div class="menu-details"><span>Puri</span><span>₹40</span></div><button class="add-to-cart" onclick="addToCart('Puri', 40)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/bhatura.jpg" alt="Bhatura"><div class="menu-details"><span>Bhatura</span><span>₹50</span></div><button class="add-to-cart" onclick="addToCart('Bhatura', 50)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/kulcha.jpg" alt="Kulcha"><div class="menu-details"><span>Kulcha</span><span>₹60</span></div><button class="add-to-cart" onclick="addToCart('Kulcha', 60)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/tandoori-roti.jpg" alt="Tandoori Roti"><div class="menu-details"><span>Tandoori Roti</span><span>₹40</span></div><button class="add-to-cart" onclick="addToCart('Tandoori Roti', 40)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/missi-roti.jpg" alt="Missi Roti"><div class="menu-details"><span>Missi Roti</span><span>₹50</span></div><button class="add-to-cart" onclick="addToCart('Missi Roti', 50)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/alu-paratha.jpg" alt="Alu Paratha"><div class="menu-details"><span>Alu Paratha</span><span>₹70</span></div><button class="add-to-cart" onclick="addToCart('Alu Paratha', 70)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/gobi-paratha.jpg" alt="Gobi Paratha"><div class="menu-details"><span>Gobi Paratha</span><span>₹70</span></div><button class="add-to-cart" onclick="addToCart('Gobi Paratha', 70)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/paneer-paratha.jpg" alt="Paneer Paratha"><div class="menu-details"><span>Paneer Paratha</span><span>₹80</span></div><button class="add-to-cart" onclick="addToCart('Paneer Paratha', 80)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/lacha-paratha.jpg" alt="Lacha Paratha"><div class="menu-details"><span>Lacha Paratha</span><span>₹60</span></div><button class="add-to-cart" onclick="addToCart('Lacha Paratha', 60)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/garlic-naan.jpg" alt="Garlic Naan"><div class="menu-details"><span>Garlic Naan</span><span>₹50</span></div><button class="add-to-cart" onclick="addToCart('Garlic Naan', 50)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/butter-naan.jpg" alt="Butter Naan"><div class="menu-details"><span>Butter Naan</span><span>₹50</span></div><button class="add-to-cart" onclick="addToCart('Butter Naan', 50)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/stuffed-kulcha.jpg" alt="Stuffed Kulcha"><div class="menu-details"><span>Stuffed Kulcha</span><span>₹70</span></div><button class="add-to-cart" onclick="addToCart('Stuffed Kulcha', 70)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="rice">
+            <h2>Rice (Veg)</h2>
+            <div class="menu-item"><img src="images/biryani.jpg" alt="Biryani"><div class="menu-details"><span>Biryani</span><span>₹180</span></div><button class="add-to-cart" onclick="addToCart('Biryani', 180)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/pulao.jpg" alt="Pulao"><div class="menu-details"><span>Pulao</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Pulao', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/jeera-rice.jpg" alt="Jeera Rice"><div class="menu-details"><span>Jeera Rice</span><span>₹120</span></div><button class="add-to-cart" onclick="addToCart('Jeera Rice', 120)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/vegetable-fried-rice.jpg" alt="Vegetable Fried Rice"><div class="menu-details"><span>Vegetable Fried Rice</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Vegetable Fried Rice', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/lemon-rice.jpg" alt="Lemon Rice"><div class="menu-details"><span>Lemon Rice</span><span>₹130</span></div><button class="add-to-cart" onclick="addToCart('Lemon Rice', 130)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/coconut-rice.jpg" alt="Coconut Rice"><div class="menu-details"><span>Coconut Rice</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Coconut Rice', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/tamarind-rice.jpg" alt="Tamarind Rice"><div class="menu-details"><span>Tamarind Rice</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Tamarind Rice', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/curd-rice.jpg" alt="Curd Rice"><div class="menu-details"><span>Curd Rice</span><span>₹120</span></div><button class="add-to-cart" onclick="addToCart('Curd Rice', 120)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/khichdi.jpg" alt="Khichdi"><div class="menu-details"><span>Khichdi</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Khichdi', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/vegetable-pulao.jpg" alt="Vegetable Pulao"><div class="menu-details"><span>Vegetable Pulao</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Vegetable Pulao', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mushroom-rice.jpg" alt="Mushroom Rice"><div class="menu-details"><span>Mushroom Rice</span><span>₹170</span></div><button class="add-to-cart" onclick="addToCart('Mushroom Rice', 170)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/peas-pulao.jpg" alt="Peas Pulao"><div class="menu-details"><span>Peas Pulao</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Peas Pulao', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/okra-rice.jpg" alt="Okra Rice"><div class="menu-details"><span>Okra Rice</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Okra Rice', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/corn-rice.jpg" alt="Corn Rice"><div class="menu-details"><span>Corn Rice</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Corn Rice', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/spinach-rice.jpg" alt="Spinach Rice"><div class="menu-details"><span>Spinach Rice</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Spinach Rice', 160)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/tomato-rice.jpg" alt="Tomato Rice"><div class="menu-details"><span>Tomato Rice</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Tomato Rice', 140)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="desserts">
+            <h2>Desserts</h2>
+            <div class="menu-item"><img src="images/gulab-jamun.jpg" alt="Gulab Jamun"><div class="menu-details"><span>Gulab Jamun</span><span>₹90</span></div><button class="add-to-cart" onclick="addToCart('Gulab Jamun', 90)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/rasgulla.jpg" alt="Rasgulla"><div class="menu-details"><span>Rasgulla</span><span>₹80</span></div><button class="add-to-cart" onclick="addToCart('Rasgulla', 80)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/kulfi.jpg" alt="Kulfi"><div class="menu-details"><span>Kulfi</span><span>₹100</span></div><button class="add-to-cart" onclick="addToCart('Kulfi', 100)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/jalebi.jpg" alt="Jalebi"><div class="menu-details"><span>Jalebi</span><span>₹70</span></div><button class="add-to-cart" onclick="addToCart('Jalebi', 70)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/gajar-halwa.jpg" alt="Gajar Halwa"><div class="menu-details"><span>Gajar Halwa</span><span>₹110</span></div><button class="add-to-cart" onclick="addToCart('Gajar Halwa', 110)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="water-bottles">
+            <h2>Water Bottles</h2>
+            <div class="menu-item"><img src="images/mineral-water.jpg" alt="Mineral Water (500ml)"><div class="menu-details"><span>Mineral Water (500ml)</span><span>₹20</span></div><button class="add-to-cart" onclick="addToCart('Mineral Water (500ml)', 20)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mineral-water-1l.jpg" alt="Mineral Water (1L)"><div class="menu-details"><span>Mineral Water (1L)</span><span>₹30</span></div><button class="add-to-cart" onclick="addToCart('Mineral Water (1L)', 30)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="mocktails">
+            <h2>Mocktails</h2>
+            <div class="menu-item"><img src="images/virgin-mojito.jpg" alt="Virgin Mojito"><div class="menu-details"><span>Virgin Mojito</span><span>₹150</span></div><button class="add-to-cart" onclick="addToCart('Virgin Mojito', 150)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/fruit-punch.jpg" alt="Fruit Punch"><div class="menu-details"><span>Fruit Punch</span><span>₹140</span></div><button class="add-to-cart" onclick="addToCart('Fruit Punch', 140)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/blue-lagoon.jpg" alt="Blue Lagoon"><div class="menu-details"><span>Blue Lagoon</span><span>₹160</span></div><button class="add-to-cart" onclick="addToCart('Blue Lagoon', 160)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="cocktails">
+            <h2>Cocktails</h2>
+            <div class="menu-item"><img src="images/margarita.jpg" alt="Margarita"><div class="menu-details"><span>Margarita</span><span>₹350</span></div><button class="add-to-cart" onclick="addToCart('Margarita', 350)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/mojito.jpg" alt="Mojito"><div class="menu-details"><span>Mojito</span><span>₹300</span></div><button class="add-to-cart" onclick="addToCart('Mojito', 300)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/cosmopolitan.jpg" alt="Cosmopolitan"><div class="menu-details"><span>Cosmopolitan</span><span>₹380</span></div><button class="add-to-cart" onclick="addToCart('Cosmopolitan', 380)">Add to Cart</button></div>
+        </div>
+        <div class="menu-section" data-category="additional">
+            <h2>Additional</h2>
+            <div class="menu-item"><img src="images/papad.jpg" alt="Papad"><div class="menu-details"><span>Papad</span><span>₹30</span></div><button class="add-to-cart" onclick="addToCart('Papad', 30)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/raita.jpg" alt="Raita"><div class="menu-details"><span>Raita</span><span>₹50</span></div><button class="add-to-cart" onclick="addToCart('Raita', 50)">Add to Cart</button></div>
+            <div class="menu-item"><img src="images/salad.jpg" alt="Green Salad"><div class="menu-details"><span>Green Salad</span><span>₹70</span></div><button class="add-to-cart" onclick="addToCart('Green Salad', 70)">Add to Cart</button></div>
+        </div>
+
+        <div class="cart-section">
+            <h2>Your Cart</h2>
+            <ul id="cartItems">
+                </ul>
+            <p>Total: <span id="cartTotal">₹0</span></p>
+            <button onclick="clearCart()">Clear Cart</button>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
